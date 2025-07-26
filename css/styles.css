@@ -572,6 +572,9 @@ body {
   justify-content: center;
 }
 
+.user-name-wrapper {
+}
+
 .footer-subscribe-input {
   width: 264px;
   height: 40px;
@@ -587,7 +590,7 @@ body {
 }
 
 .button-tg {
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -612,6 +615,7 @@ body {
 }
 
 .subscribe-tg-icon {
+  margin-left: 16px;
 }
 
 /* #endregion */
@@ -622,13 +626,14 @@ body {
   position: fixed;
   inset: 0;
   z-index: 2;
-  background-color: rgb(17 17 17 / 50%);
+  background-color: rgba(46, 47, 66, 0.4);
 
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 
-  transition: opacity 400ms ease-in, visibility 400ms ease-in;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
@@ -715,6 +720,8 @@ body {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .backdroop-form-field {
@@ -775,6 +782,10 @@ body {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.backdrop-text-area:focus {
+  border-color: #4d5ae5;
+}
+
 .backdrop-text-area::placeholder {
   font-weight: 400;
   font-size: 12px;
@@ -803,14 +814,17 @@ body {
   margin-bottom: 24px;
 }
 .privacy-label-icon {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  fill: transparent;
   width: 16px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #user-privacy:checked + .backdrop-privacy-label .privacy-label-icon {
@@ -826,7 +840,7 @@ body {
   color: #4d5ae5;
 }
 .backdrop-btn-send {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   flex-direction: row;
@@ -838,18 +852,26 @@ body {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
   margin: 0 auto;
+  min-width: 169px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop-btn-caption {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  text-align: center;
-  color: #fff;
+}
+
+.backdrop-btn-send:hover,
+.backdrop-btn-send:focus {
+  border: none;
+  background: #404bbf;
 }
 
 /* #endregion */
