@@ -682,6 +682,7 @@ body {
 .backdrop-close-btn:hover,
 .backdrop-close-btn:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .backdrop-close-icon {
