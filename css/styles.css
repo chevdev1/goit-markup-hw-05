@@ -528,6 +528,7 @@ body {
   gap: 16px;
   display: flex;
 }
+
 .contact-link:hover,
 .contact-link:focus {
   color: #404bbf;
@@ -767,6 +768,7 @@ body {
   flex-direction: column;
   margin-bottom: 16px;
 }
+
 .backdrop-text-area {
   width: 100%;
   height: 120px;
@@ -801,6 +803,7 @@ body {
   margin-bottom: 24px;
   height: 16px;
 }
+
 .backdrop-privacy-label {
   display: flex;
   align-items: center;
@@ -814,6 +817,7 @@ body {
   color: #8e8f99;
   margin-bottom: 24px;
 }
+
 .privacy-label-icon {
   display: inline-flex;
   width: 16px;
@@ -840,6 +844,7 @@ body {
   text-decoration-skip-ink: none;
   color: #4d5ae5;
 }
+
 .backdrop-btn-send {
   display: block;
   align-items: center;
